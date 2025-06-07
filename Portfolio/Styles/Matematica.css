@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #11171c;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #d3d3d3;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    text-align: 20%;
+    margin-top: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text p {
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.header-text h1 span {
+    color: #fff;
+}
+
+/* ===== CARD STYLES ===== */
+.card-container {
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    gap: 30px;
+}
+
+.card {
+    background: #1b242c;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    border-left: 4px solid #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2::after {
+    content: '+';
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.card.expanded h2::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.card p {
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 0;
+}
+
+.card.expanded .hidden-content {
+    max-height: 1000px;
+    margin-top: 20px;
+}
+
+.hidden-content ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.hidden-content li {
+    margin-bottom: 10px;
+}
+
+.card-arrow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ababab;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .card-arrow {
+    opacity: 1;
+    right: 20px;
+}
+
+/* ===== FOOTER STYLES ===== */
+.Footer {
+    background: #1b242c;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.BackToTheTop a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.BackToTheTop a:hover {
+    transform: translateY(-5px);
+}
+
+.copyright {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-text h1 {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .header-text p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 10px 5%;
+    }
+
+    .card-container {
+        width: 90%;
+        margin: 40px auto;
+        display: grid;
+        gap: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #1b242c;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}

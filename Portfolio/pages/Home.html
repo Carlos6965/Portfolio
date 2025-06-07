@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="#about">Sobre mim</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Programador Backend</p>
+                <h1>Sou <span>Carlos</span><br>Cândido.</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Sobre------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../imagens/WhatsApp Image 2025-06-07 at 14.59.08.jpeg"
+                        alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre mim</h1>
+                    <p>
+                        Meu nome é Carlos Alberto Ferreira Candido,
+                        tenho 19 anos e atualmente estou cursando o 4º semestre de Análise e Desenvolvimento de Sistemas
+                        na Fatec Jales.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('Habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('Formacao')">Formação</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Habilidades">
+                        <ul>
+                            <li><span>Desenvolvimento de APIs</span><br>Criação de APIs RESTful e GraphQL</li>
+                            <li><span>Gerenciamento de Banco de Dados</span><br>Modelagem e otimização de bancos
+                                SQL/NoSQL</li>
+                            <li><span>Lógica de Servidor</span><br>Construção de lógica de negócio escalável com
+                                Node.js/.NET</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Formacao">
+                        <ul>
+                            Técnico em Analise e Desenvolvimento de Sistemas - AMS pela Etec Jales.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Contato------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contate-me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>candidocarlos149@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+55 (17) 9 9139-1284</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Carlos6965" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <a href="" class="btn btn2">Baixar Curriculo</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                        <textarea id="Messsage" rows="6" placeholder="Sua Mensagem"></textarea>
+                        <button type="submit" class="btn btn2">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

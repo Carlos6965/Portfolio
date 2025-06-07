@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/Matematica.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="./Home.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="./Home.html#about">Sobre mim</a></li>
+                    <li><a href="./Home.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Matemática Discreta</h1>
+                <p>Professor: Willian Guimaraes Borges</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Tabelas-Verdade</h2>
+                <p class="visible-content">A tabela-verdade é uma ferramenta usada na lógica proposicional para mostrar
+                    todas as combinações
+                    possíveis de valores de verdade (verdadeiro ou falso) para uma expressão lógica.</p>
+
+                <div class="hidden-content">
+                    <p>Ela é especialmente útil para analisar proposições compostas e determinar sua validade. Com a
+                        tabela-verdade podemos:</p>
+                    <ul>
+                        <li>Determinar o valor lógico de proposições complexas</li>
+                        <li>Identificar tautologias e contradições</li>
+                        <li>Verificar a equivalência entre proposições</li>
+                        <li>Analisar argumentos lógicos</li>
+                    </ul>
+                    <p>Uma tabela-verdade completa lista todas as possíveis combinações de valores verdade para as
+                        proposições simples e o resultado da proposição composta.</p>
+
+                    <img src="../imagens/tabela-verdade-da-operacao-condicional.webp">
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Teoria dos Conjuntos</h2>
+                <p class="visible-content">Teoria dos Conjuntos é um ramo da matemática que estuda conjuntos, que são
+                    coleções de objetos bem definidos, chamados elementos.</p>
+                <div class="hidden-content">
+                    <p>Ela fornece a base para grande parte da matemática moderna. Os principais conceitos:</p>
+                    <ul>
+                        <li>Conjunto: coleção de elementos (ex: {1, 2, 3}).</li>
+                        <li>Pertinência: um elemento pertence ou não a um conjunto.</li>
+                        <li>Subconjunto: todo elemento de um conjunto A está em B.</li>
+                        <li>União: reúne todos os elementos de dois conjuntos.</li>
+                        <li>Interseção: elementos comuns a dois conjuntos.</li>
+                        <li>Diferença: elementos de um conjunto que não estão no outro.</li>
+                        <li>Conjunto vazio: conjunto sem elementos (∅).</li>
+                    </ul>
+                    <p>A teoria dos conjuntos é fundamental para lógica, álgebra, análise e outras áreas da matemática.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Análise Combinatória</h2>
+                <p class="visible-content">Análise Combinatória é o ramo da matemática que estuda as diferentes maneiras
+                    de contar, agrupar e organizar elementos de um conjunto, sem repeti-los ou considerando diferentes
+                    critérios.</p>
+                <div class="hidden-content">
+                    <p>Principais conceitos:</p>
+                    <ul>
+                        <li>Permutação: arranjo de todos os elementos de um conjunto, considerando a ordem.</li>
+                        <li>Combinação: seleção de elementos de um conjunto, sem considerar a ordem.</li>
+                        <li>Arranjo: seleção de elementos de um conjunto, considerando a ordem.</li>
+                    </ul>
+                    <p>É usada para resolver problemas de contagem, probabilidade e organização de dados.</p>
+                    <img src="../imagens/resumo-sobre-tipos-de-agrupamentos-e-formulas-da-analise-combinatoria.webp">
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Teoria dos Grafos</h2>
+                <p class="visible-content">Teoria dos Grafos é o ramo da matemática que estuda estruturas formadas por
+                    objetos chamados vértices (ou nós) conectados por arestas (ou ligações). Ela é usada para modelar
+                    relações e conexões em redes, como mapas, redes sociais, circuitos e sistemas de transporte.</p>
+                <div class="hidden-content">
+                    <p>Principais conceitos:</p>
+                    <ul>
+                        <li>Vértice (nó): ponto de conexão.</li>
+                        <li>Aresta: ligação entre dois vértices.</li>
+                        <li>Grafo simples: não possui laços nem arestas múltiplas.</li>
+                        <li>Grafo direcionado: as arestas têm direção.</li>
+                        <li>Caminho: sequência de vértices conectados por arestas.</li>
+                        <li>Ciclo: caminho que começa e termina no mesmo vértice.</li>
+                    </ul>
+                    <p>A Teoria dos Grafos é fundamental em ciência da computação, engenharia, logística e outras áreas.
+                    </p>
+                    <img src="../imagens/Pontes-de-Konigsberg-blog-ILOS.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>

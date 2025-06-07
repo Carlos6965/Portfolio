@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/Organizacao.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="./Home.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="./Home.html#about">Sobre mim</a></li>
+                    <li><a href="./Home.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Organizacao de Computadores e Sistemas Operacionais</h1>
+                <p>Professor: Welington Luis Codinhoto Garcia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Dispositivos de Entrada e Saída & Barramentos</h2>
+                <p class="visible-content">Dispositivos de Entrada e Saída são componentes que permitem a comunicação
+                    entre o usuário e o computador, já os barramentos são vias de comunicação que conectam os
+                    componentes
+                    internos do computador.</p>
+                <div class="hidden-content">
+                    <p>Dispositivos de Entrada (Input):</p>
+                    <ul>
+                        <li>Teclado, mouse, scanner, microfone, câmera</li>
+                        <li>Convertem ações do usuário em dados digitais</li>
+                    </ul>
+                    <p>Dispositivos de Saída (Output):</p>
+                    <ul>
+                        <li>Vias de comunicação entre componentes do computador</li>
+                        <li>Apresentam informações processadas ao usuário</li>
+                    </ul>
+                    <p>Barramentos:</p>
+                    <ul>
+                        <li>Vias de comunicação entre componentes do computador</li>
+                        <li>Barramento de Dados: Transporta informações (bidirecional)</li>
+                        <li>Barramento de Endereços: Especifica localizações (unidirecional)</li>
+                        <li>Barramento de Controle: Gerencia operações (sinais de clock, leitura/escrita)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Teoria dos Conjuntos</h2>
+                <p class="visible-content">Teoria dos Conjuntos é um ramo da matemática que estuda conjuntos, que são
+                    coleções de objetos bem definidos, chamados elementos.</p>
+                <div class="hidden-content">
+                    <p>Ela fornece a base para grande parte da matemática moderna. Os principais conceitos:</p>
+                    <ul>
+                        <li>Conjunto: coleção de elementos (ex: {1, 2, 3}).</li>
+                        <li>Pertinência: um elemento pertence ou não a um conjunto.</li>
+                        <li>Subconjunto: todo elemento de um conjunto A está em B.</li>
+                        <li>União: reúne todos os elementos de dois conjuntos.</li>
+                        <li>Interseção: elementos comuns a dois conjuntos.</li>
+                        <li>Diferença: elementos de um conjunto que não estão no outro.</li>
+                        <li>Conjunto vazio: conjunto sem elementos (∅).</li>
+                    </ul>
+                    <p>A teoria dos conjuntos é fundamental para lógica, álgebra, análise e outras áreas da matemática.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Organização de Computadores & Sistemas Operacionais</h2>
+                <p class="visible-content">Organização de Computadores é o estudo da estrutura e funcionamento dos
+                    componentes internos do computador, como processador, memória, dispositivos de entrada/saída e
+                    barramentos. Já Sistemas Operacionais são softwares que gerenciam os recursos do computador,
+                    permitindo a comunicação entre hardware e usuário.</p>
+                <div class="hidden-content">
+                    <p>Memória RAM:</p>
+                    <ul>
+                        <li>Volátil, armazenamento temporário</li>
+                        <li>Tipos: DRAM (mais comum), SRAM (mais rápida)</li>
+                        <li>Organização em células endereçáveis</li>
+                    </ul>
+                    <p>Memória ROM:</p>
+                    <ul>
+                        <li>Não-volátil, contém firmware</li>
+                        <li>Tipos: PROM, EPROM, EEPROM, Flash</li>
+                    </ul>
+                    <p>Hierarquia de Memória:</p>
+                    <ul>
+                        <li>Registradores (mais rápido, menor capacidade)</li>
+                        <li>Cache (L1, L2, L3)</li>
+                        <li>Memória Principal (RAM)</li>
+                        <li>Armazenamento Secundário (HDD/SSD)</li>
+                        <li>Armazenamento Terciário (fitas, cloud)</li>
+                    </ul>
+                    <p>Esses temas são fundamentais para entender como computadores funcionam e como os recursos são
+                        gerenciados.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Unidade Aritmética e Lógica (ULA)</h2>
+                <p class="visible-content">Unidade Aritmética e Lógica (ULA) é o componente do processador responsável
+                    por executar operações matemáticas (adição, subtração, multiplicação, divisão) e lógicas (AND, OR,
+                    NOT, XOR).</p>
+                <div class="hidden-content">
+                    <p>Componente central da CPU</p>
+                    <ul>
+                        <li>Operações aritméticas: +, -, ×, ÷</li>
+                        <li>Lógicas: AND, OR, NOT, XOR</li>
+                        <li>Deslocamento: Shift, Rotate</li>
+                        <li>Trabalha em conjunto com registradores e UC</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Pipeline</h2>
+                <p class="visible-content">Pipeline é uma técnica usada nos processadores para aumentar o desempenho,
+                    dividindo a execução de instruções em várias etapas sequenciais (estágios), como busca,
+                    decodificação, execução e escrita do resultado.</p>
+                <div class="hidden-content">
+                    <p>Técnica de processamento paralelo</p>
+                    <p>Estágios típicos:</p>
+                    <ul>
+                        <li>Fetch (busca)</li>
+                        <li>Decode (decodificação)</li>
+                        <li>Execute (execução)</li>
+                        <li>Memory (acesso à memória)</li>
+                        <li>Writeback (escrita)</li>
+                    </ul>
+                    <p>Hazards: Estrutural, de Dados, de Controle</p>
+                    <p>O pipeline é fundamental para alcançar altas velocidades em CPUs modernas.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Organização de Processadores</h2>
+                <p class="visible-content">Organização de Processadores refere-se à forma como os processadores são
+                    estruturados internamente para executar instruções de maneira eficiente.</p>
+                <div class="hidden-content">
+                    <p>Von Neumann:</p>
+                    <ul>
+                        <li>Memória unificada para dados e instruções</li>
+                        <li>Gargalo no barramento</li>
+                    </ul>
+                    <p>Harvard:</p>
+                    <ul>
+                        <li>Memórias separadas</li>
+                        <li>Maior paralelismo</li>
+                    </ul>
+                    <p>Processamento Paralelo:</p>
+                    <ul>
+                        <li>Multicore: Vários núcleos no mesmo chip</li>
+                        <li>Hyperthreading: Núcleos lógicos</li>
+                        <li>GPGPU: Processamento gráfico para fins gerais</li>
+                    </ul>
+                    <p>Tópicos Adicionais:</p>
+                    <ul>
+                        <li>Clock da CPU (frequência de operação)</li>
+                        <li>Arquiteturas RISC vs CISC</li>
+                        <li>Co-processadores (ex: FPU)</li>
+                    </ul>
+                    <p>Memória Virtual:</p>
+                    <ul>
+                        <li>Paginação</li>
+                        <li>Segmentação</li>
+                        <li>Tabelas de páginas</li>
+                    </ul>
+                    <p>Prefetching</p>
+                    <p>Branch Prediction</p>
+                    <p>Memória Virtual:</p>
+                    <p>Arquiteturas Superscalares</p>
+                    <p>Essas técnicas tornam os processadores modernos mais rápidos e eficientes, permitindo executar
+                        várias tarefas simultaneamente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
