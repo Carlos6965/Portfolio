@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/Engenharia.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.htmll#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Engenharia de Software</h1>
+                <p>Professor: Jefferson Antonio Ribeiro Passerini</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Processo Unificado (RUP)</h2>
+                <p class="visible-content">RUP (Rational Unified Process): Processo iterativo e incremental orientado a
+                    objetos, centrado em casos de uso, arquitetura e risco.</p>
+                <div class="hidden-content">
+                    <p>Fases: Concepção, Elaboração, Construção e Transição.</p>
+                    <p>Fluxos de trabalho:</p>
+                    <ul>
+                        <li>Engenharia: modelagem de negócios, requisitos, análise/desenho, implementação, testes,
+                            implantação.</li>
+                        <li>Incremental: desenvolvimento por versões com feedback contínuo.</li>
+                        <li>Apoio: gerenciamento de mudanças, projetos e ambiente.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Engenharia de Requisitos</h2>
+                <p class="visible-content">Engenharia de Requisitos: Processo de descobrir, analisar, documentar e
+                    validar requisitos.</p>
+                <div class="hidden-content">
+                    <p>Tipos de Requisitos:</p>
+                    <ul>
+                        <li>Funcionais: serviços que o sistema deve fornecer.</li>
+                        <li>Não-funcionais: restrições (tempo, segurança, usabilidade etc.).</li>
+                    </ul>
+                    <p>Elicitação: entrevistas, casos de uso, cenários, etnografia.</p>
+                    <p>Etapas: descoberta, classificação, priorização, documentação.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>UML</h2>
+                <p>Atores representam pessoas, sistemas ou entidades externas que interagem com o sistema.
+                    Casos de uso descrevem funcionalidades ou serviços oferecidos pelo sistema do ponto de vista do
+                    usuário.</p>
+                <div class="hidden-content">
+                    <p>Atores e Casos de Uso:</p>
+                    <ul>
+                        <li>Casos de uso: Descrevem interações entre usuários (atores) e o sistema.</li>
+                        <li>Atores: Representam usuários ou sistemas que interagem com o software.</li>
+                        <li>Associações: include, extend, generalização.</li>
+                        <li>Documentação: fluxo principal, alternativo, exceções, pré e pós-condições.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Modelagem de Sistemas</h2>
+                <p class="visible-content">Criação de representações do sistema sob diferentes perspectivas</p>
+                <div class="hidden-content">
+                    <p>Modelagem:</p>
+                    <ul>
+                        <li>Contexto, interação (casos de uso e sequência), estrutura (classe), comportamento
+                            (atividades, estados).</li>
+                    </ul>
+
+                    <p>Modelos UML usados:</p>
+                    <ul>
+                        <li>Diagramas de caso de uso, sequência, classe, atividades, máquina de estados.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Projeto de Arquitetura</h2>
+                <p>Projeto arquitetural é a organização do sistema em componentes e suas interações.
+                    Inclui diferentes visões arquiteturais: lógica, processo, desenvolvimento e física.
+                </p>
+                <div class="hidden-content">
+                    <p>Projeto arquitetural: Organização do sistema em componentes.</p>
+                    <p>Visões arquiteturais: lógica, processo, desenvolvimento, física.</p>
+                    <p>Padrões arquitetônicos:</p>
+                    <ul>
+                        <li>MVC, Camadas, Repositório, Cliente-servidor.</li>
+                    </ul>
+                    <p>Critérios de decisão: desempenho, segurança, disponibilidade, manutenibilidade.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>UML: Diagrama de Classe</h2>
+                <p class="visible-content">O Diagrama de Classe é utilizado para representar a estrutura estática de um
+                    sistema, mostrando as classes, seus atributos, métodos e os relacionamentos entre elas.
+                    Permite visualizar como os objetos se organizam e interagem, facilitando o entendimento e o projeto
+                    da arquitetura do software.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Relacionamentos: associação (simples, binária, n-ária), agregação, composição, herança, dependência, realizações.</li>
+                        <li>Conceitos adicionais: visibilidade, multiplicidade, interfaces, restrições (inclusive com OCL).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
