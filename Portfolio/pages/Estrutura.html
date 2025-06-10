@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/Organizacao.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Estrutura de Dados</h1>
+                <p>Professor: Willian Guimaraes Borges</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Funções em C</h2>
+                <p class="visible-content">Blocos reutilizáveis de código.</p>
+                <div class="hidden-content">
+                    <p>Declaração:</p>
+                    <ul>
+                        <li>tipo nomeFuncao(parâmetros) { ... }</li>
+                    </ul>
+                    <p>Parâmetros:</p>
+                    <ul>
+                        <li>Por valor: cópia da variável (não altera a original).</li>
+                        <li>Por referência: com ponteiros (*ptr) para alterar diretamente.</li>
+                    </ul>
+                    <p>Escopo de memória:</p>
+                    <ul>
+                        <li>Variáveis locais: Stack.</li>
+                        <li>Funções modificam dados com ponteiros.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>TMatriz</h2>
+                <p class="visible-content"> Vetor de duas dimensões.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Acesso: matriz[i][j] para acessar um elemento.</li>
+                        <li>Inicialização: int m[2][2] = {{1,2},{3,4}};</li>
+                        <li>Alocação dinâmica: Usando int **matriz + malloc.</li>
+                        <li>União: reúne todos os elementos de dois conjuntos.</li>
+                        <li>Uso comum: tabelas, mapas, planilhas, jogos, gráficos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Vetores em C</h2>
+                <p class="visible-content">Estrutura linear que armazena dados do mesmo tipo.</p>
+                <div class="hidden-content">
+                    <p>Alocação de memória:</p>
+                    <ul>
+                        <li>Variáveis locais (stack), globais (data/bss), dinâmicas (heap).</li>
+                    </ul>
+                    <p>Tipos de vetores:</p>
+                    <ul>
+                        <li>Estático: Tamanho fixo, acesso rápido.</li>
+                        <li>Dinâmico: Usa malloc/realloc, tamanho variável.</li>
+                        <li>Lista encadeada: Acesso lento, mas inserção/remoção eficiente.</li>
+                        <li>Heap: Útil para estruturas com prioridade.</li>
+                    </ul>
+                    <p>Ordenação:</p>
+                    <ul>
+                        <li>Bubble Sort: simples, mas lento.</li>
+                        <li>Selection Sort: busca o menor e coloca na frente.</li>
+                        <li>QuickSort: rápido, usa recursão e divisão por pivô.</li>
+                    </ul>
+                    <p>Busca:</p>
+                    <ul>
+                        <li>Linear: percorre um por um.</li>
+                        <li>Binária: só em vetores ordenados; mais rápida (O(log n)).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Structs</h2>
+                <p class="visible-content">Agrupam dados de tipos diferentes em um único tipo.</p>
+                <div class="hidden-content">
+                    <p>Ponteiros:</p>
+                    <ul>
+                        <li>Permitem passagem por referência e alocação dinâmica.</li>
+                        <li>Acesso a campos via ponteiro: ptr->campo.</li>
+                    </ul>
+                    <p>Uso prático:</p>
+                    <ul>
+                        <li>Vetores de structs.</li>
+                        <li>Alocação dinâmica com malloc.</li>
+                        <li>Funções que modificam structs via ponteiro.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Nó</h2>
+                <p class="visible-content">Um nó é uma unidade básica de uma estrutura de dados dinâmica como listas, árvores e grafos.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li></li>
+                        <li>Ele armazena um valor (dado) e referência(s) para outro(s) nó(s).</li>
+                    </ul>
+                    <p>Cada nó contém:</p>
+                    <ul>
+                        <li>Um campo de dado (int valor).</li>
+                        <li>Um ponteiro para o próximo nó (*prox).</li>
+                    </ul>
+                    <p>O último nó aponta para NULL, indicando o fim da lista.</p>
+                    <ul>
+                        <li>Cada nó aponta tanto para o próximo quanto para o anterior.</li>
+                        <li>Permite navegação nos dois sentidos.</li>
+                    </ul>
+                    <p>Nó em Árvores:</p>
+                    <ul>
+                        <li>Usado em árvores binárias.</li>
+                        <li>Cada nó aponta para dois filhos: esquerda e direita.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Listas Encadeadas</h2>
+                <p class="visible-content">Cada nó tem um valor e um ponteiro para o próximo.</p>
+                <div class="hidden-content">
+                    <p>Operações:</p>
+                    <ul>
+                        <li>Inserir no início/fim.</li>
+                        <li>Remover por valor.</li>
+                        <li>Percorrer e buscar elementos.</li>
+                    </ul>
+                    <p>Vantagens:</p>
+                    <ul>
+                        <li>Tamanho dinâmico.</li>
+                        <li>Inserção/remoção eficiente.</li>
+                    </ul>
+                    <p>Desvantagens:</p>
+                    <ul>
+                        <li>Acesso sequencial (lento).</li>
+                        <li>Consome mais memória (ponteiros).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Pilhas e Filas</h2>
+                <div class="hidden-content">
+                    <p>Pilha (Stack):</p>
+                    <ul>
+                        <li>LIFO (último a entrar, primeiro a sair).</li>
+                        <li>Operações: push, pop, peek.</li>
+                        <li>Exemplo: histórico do navegador.</li>
+                    </ul>
+                    <p>Fila (Queue):</p>
+                    <ul>
+                        <li>FIFO (primeiro a entrar, primeiro a sair).</li>
+                        <li>Operações: enqueue, dequeue, peek.</li>
+                        <li>Exemplo: fila de atendimento.</li>
+                    </ul>
+                    <p>PPonteiro de ponteiro (**ptr): Necessário para modificar ponteiros em funções.</p>
+                    <p>Fila com prioridade:</p>
+                    <ul>
+                        <li>Elementos com mais prioridade são atendidos antes.</li>
+                    </ul>
+                    <p>Elementos com mais prioridade são atendidos antes.</p>
+                    <ul>
+                        <li>Cada nó tem ponteiros para anterior e próximo.</li>
+                        <li>Arquiteturas RISC vs CISC</li>
+                        <li>Permite navegação nos dois sentidos.</li>
+                    </ul>
+                    <p>Fila com vetor:</p>
+                    <ul>
+                        <li>Problema: desperdício de espaço após remoções.</li>
+                    </ul>
+                    <p>Fila Circular:</p>
+                    <ul>
+                        <li>Reutiliza posições com fim = (fim + 1) % TAM.</li>
+                    </ul>
+                    <p>Lista Duplamente Encadeada Circular:</p>
+                    <ul>
+                        <li>Primeiro nó aponta para o último e vice-versa.</li>
+                        <li>Útil em simulações circulares (ex: jogos, playlists).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
