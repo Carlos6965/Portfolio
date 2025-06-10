@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/TecnicasAvancadas.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Técnicas Avançadas de Programação</h1>
+                <p>Professor: Welington Luis Codinhoto Garcia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Ementa</h2>
+                <p>Aborda conceitos fundamentais de Programação Orientada a Objetos (POO) e desenvolvimento de software
+                </p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>POO: Classes, objetos, encapsulamento, herança, polimorfismo, métodos, classes abstratas,
+                            sobrecarga de métodos, herança múltipla, modificadores de acesso, construtores.</li>
+                        <li>Tópicos Avançados: Manipulação de exceções, arquitetura em camadas, interfaces gráficas,
+                            padrões de projeto (GoF, MVC, MVVM, MVP), Test-Driven Development (TDD), controle de
+                            versionamento.</li>
+                        <li>Revisão de .NET: Estruturas condicionais (if-else, switch-case), laços de repetição (for,
+                            while, do-while), vetores e matrizes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Crud 1-N .NET com PostgreSQL</h2>
+                <p class="visible-content">Implementar um CRUD (Create, Read, Update, Delete) para relacionamento 1-N
+                    (um fornecedor pode ter vários produtos) usando ASP.NET Core MVC e PostgreSQL.</p>
+                <div class="hidden-content">
+                    <p>Configuração Inicial:</p>
+                    <ul>
+                        <li>Criação do projeto MVC no Visual Studio.</li>
+                        <li>PInstalação de pacotes NuGet (Npgsql.EntityFrameworkCore.PostgreSQL,
+                            Microsoft.EntityFrameworkCore.Tools).</li>
+                        <li>Configuração da conexão com PostgreSQL no appsettings.json.</li>
+                    </ul>
+                    <p>Modelagem de Dados:</p>
+                    <ul>
+                        <li>Classes Fornecedor e Produto com relacionamento 1-N.</li>
+                        <li>Criação do DbContext (ApplicationDbContext) para acesso ao banco de dados.</li>
+                    </ul>
+                    <p>Migrações e Banco de Dados:</p>
+                    <ul>
+                        <li>Execução de comandos para criar migrações (Add-Migration Inicial) e atualizar o banco
+                            (Update-Database).</li>
+                    </ul>
+                    <p>Scaffolding:</p>
+                    <ul>
+                        <li>Geração automática de controllers e views para Fornecedor e Produto usando Entity Framework.
+                        </li>
+                    </ul>
+
+                    <div class="social-icons"> 
+                        <a href="https://github.com/Carlos6965/Projetos-DotNet">
+                            <i class="fa-brands fa-github"></i><p>Projetos no Github</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
