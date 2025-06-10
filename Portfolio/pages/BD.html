@@ -34,96 +34,41 @@
     <div id="conteudo">
         <div class="card-container">
             <div class="card" onclick="toggleCard(this)">
-                <h2>Processo Unificado (RUP)</h2>
-                <p class="visible-content">RUP (Rational Unified Process): Processo iterativo e incremental orientado a
-                    objetos, centrado em casos de uso, arquitetura e risco.</p>
+                <h2>DCL – Data Control Language</h2>
+                <p class="visible-content">Conjunto de comandos SQL para administrar usuários, grupos e permissões no
+                    PostgreSQL.</p>
                 <div class="hidden-content">
-                    <p>Fases: Concepção, Elaboração, Construção e Transição.</p>
-                    <p>Fluxos de trabalho:</p>
+                    <p>Principais Comandos:</p>
                     <ul>
-                        <li>Engenharia: modelagem de negócios, requisitos, análise/desenho, implementação, testes,
-                            implantação.</li>
-                        <li>Incremental: desenvolvimento por versões com feedback contínuo.</li>
-                        <li>Apoio: gerenciamento de mudanças, projetos e ambiente.</li>
+                        <li>CREATE ROLE: Cria papéis (roles) com opções como LOGIN, SUPERUSER, PASSWORD, CONNECTION
+                            LIMIT, etc.</li>
+                        <li>ALTER ROLE: Modifica papéis existentes (ex.: definir senha).</li>
+                        <li>DROP ROLE: Remove papéis.</li>
+                        <li>GRANT/REVOKE: Concede ou revoga privilégios (ex.: SELECT, INSERT) em objetos do banco.</li>
                     </ul>
+                    <p>Grupos: Papéis sem permissão de login, usados para agrupar usuários.</p>
+                    <p>Exercícios Práticos: Incluem criação de papéis com restrições, concessão de permissões e testes
+                        de acesso.</p>
                 </div>
             </div>
 
             <div class="card" onclick="toggleCard(this)">
-                <h2>Engenharia de Requisitos</h2>
-                <p class="visible-content">Engenharia de Requisitos: Processo de descobrir, analisar, documentar e
-                    validar requisitos.</p>
+                <h2>Stored Procedures e Functions no PostgreSQL</h2>
+                <p class="visible-content">Blocos de código SQL armazenados no servidor para melhorar
+                    desempenho, reutilização e segurança.</p>
                 <div class="hidden-content">
-                    <p>Tipos de Requisitos:</p>
+                    <p>Diferenças:</p>
                     <ul>
-                        <li>Funcionais: serviços que o sistema deve fornecer.</li>
-                        <li>Não-funcionais: restrições (tempo, segurança, usabilidade etc.).</li>
+                        <li>Functions: Sempre retornam valores, podem ser usadas em consultas.</li>
+                        <li>Procedures: Não retornam valores diretamente, executadas via CALL.</li>
                     </ul>
-                    <p>Elicitação: entrevistas, casos de uso, cenários, etnografia.</p>
-                    <p>Etapas: descoberta, classificação, priorização, documentação.</p>
-                </div>
-            </div>
-
-            <div class="card" onclick="toggleCard(this)">
-                <h2>UML</h2>
-                <p>Atores representam pessoas, sistemas ou entidades externas que interagem com o sistema.
-                    Casos de uso descrevem funcionalidades ou serviços oferecidos pelo sistema do ponto de vista do
-                    usuário.</p>
-                <div class="hidden-content">
-                    <p>Atores e Casos de Uso:</p>
+                    <p>Tipos de Funções:</p>
                     <ul>
-                        <li>Casos de uso: Descrevem interações entre usuários (atores) e o sistema.</li>
-                        <li>Atores: Representam usuários ou sistemas que interagem com o software.</li>
-                        <li>Associações: include, extend, generalização.</li>
-                        <li>Documentação: fluxo principal, alternativo, exceções, pré e pós-condições.</li>
+                        <li>SQL: Comandos simples, sem estruturas de controle.</li>
+                        <li>PL/pgSQL: Suporta variáveis, loops e condições.</li>
+                        <li>Linguagens Externas: Como Python ou C.</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="card" onclick="toggleCard(this)">
-                <h2>Modelagem de Sistemas</h2>
-                <p class="visible-content">Criação de representações do sistema sob diferentes perspectivas</p>
-                <div class="hidden-content">
-                    <p>Modelagem:</p>
-                    <ul>
-                        <li>Contexto, interação (casos de uso e sequência), estrutura (classe), comportamento
-                            (atividades, estados).</li>
-                    </ul>
-
-                    <p>Modelos UML usados:</p>
-                    <ul>
-                        <li>Diagramas de caso de uso, sequência, classe, atividades, máquina de estados.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card" onclick="toggleCard(this)">
-                <h2>Projeto de Arquitetura</h2>
-                <p>Projeto arquitetural é a organização do sistema em componentes e suas interações.
-                    Inclui diferentes visões arquiteturais: lógica, processo, desenvolvimento e física.
-                </p>
-                <div class="hidden-content">
-                    <p>Projeto arquitetural: Organização do sistema em componentes.</p>
-                    <p>Visões arquiteturais: lógica, processo, desenvolvimento, física.</p>
-                    <p>Padrões arquitetônicos:</p>
-                    <ul>
-                        <li>MVC, Camadas, Repositório, Cliente-servidor.</li>
-                    </ul>
-                    <p>Critérios de decisão: desempenho, segurança, disponibilidade, manutenibilidade.</p>
-                </div>
-            </div>
-
-            <div class="card" onclick="toggleCard(this)">
-                <h2>UML: Diagrama de Classe</h2>
-                <p class="visible-content">O Diagrama de Classe é utilizado para representar a estrutura estática de um
-                    sistema, mostrando as classes, seus atributos, métodos e os relacionamentos entre elas.
-                    Permite visualizar como os objetos se organizam e interagem, facilitando o entendimento e o projeto
-                    da arquitetura do software.</p>
-                <div class="hidden-content">
-                    <ul>
-                        <li>Relacionamentos: associação (simples, binária, n-ária), agregação, composição, herança, dependência, realizações.</li>
-                        <li>Conceitos adicionais: visibilidade, multiplicidade, interfaces, restrições (inclusive com OCL).</li>
-                    </ul>
+                    <p>Vantagens: Redução de tráfego de rede, centralização de regras de negócio, segurança.</p>
                 </div>
             </div>
         </div>
