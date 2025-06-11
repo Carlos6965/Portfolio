@@ -92,6 +92,7 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .social-icons a:hover {
@@ -168,7 +169,7 @@ nav ul li a:hover::after {
 }
 
 .card.expanded .hidden-content {
-    max-height: 1000px;
+    max-height: 1500px;
     margin-top: 20px;
 }
 
