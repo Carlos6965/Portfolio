@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/WebeMobile.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Gestão Agil de Projetos de Softwares</h1>
+                <p>Professora: André Zagato Gomes</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2></h2>
+                <p class="visible-content">Estuda a interação entre humanos e dispositivos digitais (PCs, smartphones,
+                    eletrodomésticos).
+                    Envolve hardware, software e comunicação.</p>
+                <div class="hidden-content">
+                    <p>Objetivos:</p>
+                    <ul>
+                        <li>Garantir que a saída do sistema seja coerente com a entrada e atenda às expectativas do
+                            usuário.</li>
+                        <li>Evitar "maus projetos" com interfaces confusas ou pouco intuitivas.</li>
+                    </ul>
+                    <p>Problemas Comuns:</p>
+                    <ul>
+                        <li>Foco excessivo no sistema (ignorando a experiência do usuário).</li>
+                        <li>Uso de tecnologias obsoletas ou ferramentas inadequadas.</li>
+                        <li>Falta de avaliação da interação usuário-sistema.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Importância da Usabilidade</h2>
+                <div class="hidden-content">
+                    <p>Interface vs. Interação:</p>
+                    <ul>
+                        <li>Interface: Meio físico/conceitual de contato (ex.: tela de um app).</li>
+                        <li>Interação: Processo de comunicação entre usuário e sistema.</li>
+                    </ul>
+                    <p>Exemplos de Baixa Usabilidade:</p>
+                    <ul>
+                        <li>Sites com navegação confusa (ex.: exigir leitura de códigos de barras para ações simples).
+                        </li>
+                    </ul>
+                    <p>Pilares de uma Boa Interação:</p>
+                    <ul>
+                        <li>Facilidade, Relevância, Velocidade e Atualização.</li>
+                    </ul>
+                    <p>Áreas Relacionadas:</p>
+                    <ul>
+                        <li>Ergonomia: Adaptação ao corpo humano.</li>
+                        <li>Psicologia Cognitiva: Comportamento e aprendizado do usuário.</li>
+                        <li>Design: Equilíbrio entre funcionalidade e estética.</li>
+                        <li>Engenharia de Software: Produz sistemas com qualidade técnica, enquanto a IHC foca na
+                            qualidade da interface.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2> Conhecendo a Interface do Figma e as Principais Ferramentas de Trabalho</h2>
+                <div class="hidden-content">
+                    <p>Definição:</p>
+                    <ul>
+                        <li>Figma é uma ferramenta de design vetorial e prototipagem baseada em navegador, com versões
+                            desktop para Windows, macOS e Linux.</li>
+                        <li>Usado para criar interfaces (UI/UX) de forma colaborativa em tempo real.</li>
+                    </ul>
+                    <p>Principais Funcionalidades:</p>
+                    <ul>
+                        <li>Frames (F): Criar layouts para diferentes dispositivos (ex.: Android).</li>
+                        <li>Grids: Configurar colunas (ex.: 4 colunas com margem 16px) para alinhamento responsivo.</li>
+                        <li>Formas e Texto: </li>
+                        <ul>
+                            <li>Shape Tools: Adicionar retângulos, círculos, etc.</li>
+                            <li>Text Tool: Inserir e formatar texto (família, peso, cor).</li>
+                        </ul>
+                        <li>Efeitos como o drop shadow e o corner radius.</li>
+                        <li>Prototipagem utilizado para configurar interações (ex.: cliques para navegar entre telas) na
+                            aba Prototype.</li>
+                    </ul>
+
+                    <div class="social-icons">
+                        <a href="https://github.com/Carlos6965/Projeto-Figma" target="_blanck">
+                            <i class="fa-brands fa-github"></i>
+                            <p>Projeto no Github</p>
+                        </a>
+                    </div>
+
+                    <h1>Meu Primeiro Protótipo</h1>
+                    <p>Veja abaixo o protótipo criado no Figma:</p>
+
+                    <div class="figma-embed">
+                        <iframe style="border: none;" width="100%" height="600"
+                            src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/tjncySJcPmtsjKlwHHF6nx/Meu-primeiro-prot%C3%B3tipo"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
