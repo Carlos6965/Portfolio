@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/GestaoAgil.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Gestão Agil de Projetos de Softwares</h1>
+                <p>Professora: André Zagato Gomes</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Características de um Analista de Sistemas</h2>
+                <div class="hidden-content">
+                    <p>Principais modelos:</p>
+                    <ul>
+                        <li>Cascata (sequencial, fases bem definidas).</li>
+                        <li>Espiral (iterativo com avaliação de riscos).</li>
+                        <li>Prototipação (desenvolvimento baseado em feedback).</li>
+                        <li>Ágil (iterativo e incremental).</li>
+                    </ul>
+                    <p>Escolha do modelo: Depende do tipo de projeto, requisitos e complexidade.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Modelos de Processo de Software</h2>
+                <p class="visible-content">Representação simplificada de um processo de desenvolvimento de software.</p>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Biblioteca JavaScript para criar interfaces interativas.</li>
+                        <li>Componentização: Uso de componentes reutilizáveis para construir UIs complexas.</li>
+                        <li>Virtual DOM: Otimiza performance ao atualizar apenas partes modificadas da página.</li>
+                        <li>JSX: Sintaxe que permite escrever HTML dentro do JavaScript.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Metodologias de Gestão de Projetos</h2>
+                <p class="visible-content">Tradicional vs. Ágil</p>
+                <div class="hidden-content">
+                    <table border="1" class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Tradicional</th>
+                                <th>Ágil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Requisitos fixos no início</td>
+                                <td>Requisitos evoluem com o tempo</td>
+                            </tr>
+                            <tr>
+                                <td>Entregas em fases longas</td>
+                                <td>Entregas incrementais e rápidas</td>
+                            </tr>
+                            <tr>
+                                <td>Documentação extensa</td>
+                                <td>Foco em software funcional</td>
+                            </tr>
+                            <tr>
+                                <td>Menos flexível a mudanças</td>
+                                <td>Adapta-se a mudanças</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Métodos Ágeis</h2>
+                <p class="visible-content">Surgiu nos anos 1990 como alternativa aos métodos burocráticos. Entregar
+                    valor rápido, adaptar-se a mudanças e promover colaboração.</p>
+                <div class="hidden-content">
+                    <p>Manifesto Ágil (4 Valores)</p>
+                    <ul>
+                        <li>Indivíduos e interações > Processos e ferramentas.</li>
+                        <li>Software funcionando > Documentação extensa.</li>
+                        <li>Colaboração com o cliente > Negociação de contratos.</li>
+                        <li>Responder a mudanças > Seguir um plano rígido.</li>
+                    </ul>
+                    <p>12 Princípios do Manifesto Ágil</p>
+                    <ul>
+                        <li>Nossa maior prioridade é satisfazer o cliente através da entrega contínua e adiantada de
+                            software com valor agregado.</li>
+                        <li>Aceitar mudanças de requisitos, mesmo no fim do desenvolvimento. Processos ágeis se adequam
+                            a mudanças, para que o cliente possa tirar vantagens competitivas.</li>
+                        <li>Entregar frequentemente software funcionando, de poucas semanas a poucos meses, com
+                            preferência à menor escala de tempo.</li>
+                        <li>Pessoas de negócio e desenvolvedores devem trabalhar diariamente em conjunto por todo o
+                            projeto.</li>
+                        <li>Construir projetos em torno de indivíduos motivados, dando a eles o ambiente e o suporte
+                            necessário e confiando neles para fazer o trabalho.</li>
+                        <li>O método mais eficiente e eficaz de transmitir informações para e entre uma equipe de
+                            desenvolvimento é por meio de conversa face a face.</li>
+                        <li>Software funcionando é a medida primária de progresso.</li>
+                        <li>Os processos ágeis promovem desenvolvimento sustentável. Os patrocinadores, desenvolvedores
+                            e usuários devem ser capazes de manter um ritmo constante indefinidamente.</li>
+                        <li>Contínua atenção a excelência técnica e bom design aumenta a agilidade.</li>
+                        <li>Simplicidade: a arte de maximizar a quantidade de trabalho não realizado é essencial.</li>
+                        <li>As melhores arquiteturas, requisitos e designs emergem de times auto-organizáveis.</li>
+                        <li>Em intervalos regulares, a equipe reflete sobre como se tornar mais eficaz e então refina e
+                            ajusta seu comportamento de acordo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Extreme Programming (XP)</h2>
+                <p class="visible-content">Desenvolvimento rápido com qualidade.</p>
+                <div class="hidden-content">
+                    <p>Valores do XP:</p>
+                    <ul>
+                        <li>Comunicação</li>
+                        <li>Simplicidade</li>
+                        <li>Feedback</li>
+                        <li>Coragem</li>
+                        <li>Respeito</li>
+                    </ul>
+                    <p>Práticas do XP:</p>
+                    <ul>
+                        <li>Histórias do usuário (requisitos em linguagem simples).</li>
+                        <li>Programação em pares (dois desenvolvedores trabalhando juntos).</li>
+                        <li>Testes automatizados (desenvolvimento "test-first").</li>
+                        <li>Integração contínua (código testado e integrado diariamente).</li>
+                        <li>Refatoração (melhoria contínua do código).</li>
+                        <li>Cliente no time (disponível para validação).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
