@@ -263,4 +263,9 @@ nav .fas {
         left: 25px;
         cursor: pointer;
     }
+
+    .hidden-content img {
+        width: 100%;
+        height: auto;
+    }
 }
