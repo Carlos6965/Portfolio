@@ -251,6 +251,11 @@ nav .fas {
         gap: 30px;
     }
 
+    .hidden-content img{
+        width: 100%;
+        height: auto;
+    } 
+
     .card {
         padding: 20px;
     }
