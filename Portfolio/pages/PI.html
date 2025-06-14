@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../Styles/PI.css">
+    <script src="https://kit.fontawesome.com/898ede6f26.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="../imagens/ChatGPT Image May 24, 2025, 10_18_37 AM.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="../../index.html#header">Home</a></li>
+                    <li><a href="./4ºAno.html">4ºAno</a></li>
+                    <li><a href="../../index.html#about">Sobre mim</a></li>
+                    <li><a href="../../index.html#contact">Contato</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Projeto Integrador I</h1>
+                <p>Matéria ministrada por: Jefferson Antonio Ribeiro Passerini</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Conteudo------------------ -->
+    <div id="conteudo">
+        <div class="card-container">
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Git</h2>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Criado em 2005 por Linus Torvalds.</li>
+                        <li>Gratuito, open-source, distribuído e de alta performance.</li>
+                    </ul>
+                    <p>Características:</p>
+                    <ul>
+                        <li>Funciona localmente.</li>
+                        <li>Mantém histórico completo.</li>
+                        <li>Suporte a branches e merges.</li>
+                        <li>Colaboração sem necessidade constante de servidor.</li>
+                    </ul>
+
+                    <h3>Trabalhando com Repositórios</h3>
+                    <p>Criar repositório: git init.</p>
+                    <p>Ver status: git status.</p>
+                    <p>Adicionar arquivos:</p>
+                    <ul>
+                        <li>Arquivo específico: git add nome.txt</li>
+                        <li>Todos: git add .</li>
+                    </ul>
+                    <p>Registrar alterações (commit):</p>
+                    <ul>
+                        <li>git commit -m "Mensagem"</li>
+                    </ul>
+
+                    <p>Ver histórico de commits:</p>
+                    <ul>
+                        <li>git log</li>
+                        <li>git log --oneline</li>
+                    </ul>
+
+                    <h3>Desfazendo Alterações</h3>
+                    <p>Antes do commit:</p>
+                    <ul>
+                        <li>git restore nome.txt</li>
+                        <li>git restore --staged nome.txt</li>
+                        <li>git reset --hard</li>
+                    </ul>
+                    <h3>Ignorar Arquivos</h3>
+                    <ul>
+                        <li>Criar arquivo .gitignore.</li>
+                        <li> touch .gitignore</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>Github</h2>
+                <div class="hidden-content">
+                    <ul>
+                        <li>Plataforma online que hospeda repositórios Git.</li>
+                        <li>Funciona como rede social para desenvolvedores.</li>
+                    </ul>
+                    <h3>Conectar Repositório Local ao GitHub</h3>
+                    <p>Adicionar remoto:</p>
+                    <ul>
+                        <li>git remote add origin https://github.com/usuario/repositorio.git</li>
+                    </ul>
+
+                    <p>Enviar arquivos:</p>
+                    <ul>
+                        <li>git push -u origin main</li>
+                    </ul>
+
+                    <p>Baixar atualizações:</p>
+                    <ul>
+                        <li>git pull origin main</li>
+                    </ul>
+
+                    <p>Clonar repositório:</p>
+                    <ul>
+                        <li>git clone https://github.com/usuario/repositorio.git</li>
+                    </ul>
+
+                    <h3>Gerar Token:</h3>
+                    <ul>
+                        <li>Menu → Settings → Developer Settings → Personal Access Tokens → Generate.</li>
+                    </ul>
+
+                    <h3>Gerar Chave SSH:</h3>
+                    <p>Criar chave:</p>
+                    <ul>
+                        <li>ssh-keygen -t ed25519 -C "email@exemplo.com"</li>
+                    </ul>
+                    <p>Adicionar chave no GitHub:</p>
+                    <ul>
+                        <li>Settings → SSH and GPG keys → New SSH Key.</li>
+                    </ul>
+
+                    <h3>Trabalhando com Branches</h3>
+                    <p>Criar branch:</p>
+                    <ul>
+                        <li>git branch nome_da_branch</li>
+                    </ul>
+                    <p>Mudar de branch:</p>
+                    <ul>
+                        <li>git switch nome_da_branch</li>
+                    </ul>
+                    <p>Enviar branch:</p>
+                    <ul>
+                        <li>git push origin nome_da_branch</li>
+                    </ul>
+                    <p>Mesclar branch:</p>
+                    <ul>
+                        <li>git switch main</li>
+                        <li>git merge nome_da_branch</li>
+                    </ul>
+
+                    <h3>Resolvendo Conflitos</h3>
+                    <p>Conflitos ocorrem quando dois commits alteram a mesma linha.</p>
+                    <p>Resolver manualmente no arquivo ou usando o editor.</p>
+                    <p>Após resolver, adicionar e fazer commit:</p>
+                    <ul>
+                        <li>git add .</li>
+                        <li>git commit -m "Resolvendo conflito"</li>
+                        <li>git push</li>
+                    </ul>
+
+                    <h3>Merge vs Rebase</h3>
+                    <ul>
+                        <li>Merge: mantém o histórico das branches.</li>
+                        <li>Rebase: reescreve o histórico, criando uma linha do tempo linear (atenção: pode sobrescrever
+                            histórico).</li>
+                    </ul>
+
+                    <h3>Pull Request</h3>
+                    <p>Solicitação de revisão de código antes do merge.</p>
+                    <p>Fluxo:</p>
+                    <ul>
+                        <li>Criar uma branch.</li>
+                        <li>Enviar para o GitHub.</li>
+                        <li>No GitHub, abrir New Pull Request.</li>
+                        <li>Alguém revisa e aprova o merge.</li>
+                    </ul>
+
+                    <h3>Fork e Contribuição</h3>
+                    <p>Fork: cópia do projeto para sua conta.</p>
+                    <p>Após o fork:</p>
+                    <ul>
+                        <li>Fazer alterações.</li>
+                        <li>Abrir Pull Request no projeto original.</li>
+                    </ul>
+                    <p>O dono do projeto revisa e decide aceitar ou não.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <h2>SIGO</h2>
+                <p class="visible-content">O sistema tem como objetivo facilitar a gestão de ordens de serviço,
+                    veículos, clientes, agendamentos e estoque, além de oferecer um portal para que os clientes
+                    acompanhem o histórico, relatórios e o andamento dos serviços.</p>
+                <div class="hidden-content">
+                    <p>A plataforma foi construída com foco na organização, transparência e eficiência, buscando atender
+                        tanto às demandas operacionais da oficina quanto às expectativas dos usuários finais. Com
+                        diferentes níveis de acesso, o sistema permite que administradores, mecânicos e clientes
+                        interajam de forma segura e prática, otimizando o fluxo de informações. O uso de tecnologias web
+                        e mobile amplia o alcance da solução, tornando-a acessível de qualquer lugar e dispositivo.
+                        Apesar da crescente digitalização no setor, ainda é comum encontrar oficinas com processos
+                        manuais ou pouco automatizados, o que reforça a relevância desta proposta. Como resultado, o
+                        sistema contribui para a profissionalização do setor, melhora o relacionamento com os clientes e
+                        apoia a tomada de decisões por meio de relatórios e indicadores de desempenho.
+                    </p>
+                    <img src="../imagens/image.png">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <div class="Footer">
+        <div class="BackToTheTop">
+            <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+        <div class="copyright">Copyright © Carlos Cândido.</div>
+    </div>
+
+</body>
+
+</html>
