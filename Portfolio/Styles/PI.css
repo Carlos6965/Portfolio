@@ -230,6 +230,11 @@ nav .fas {
         background-position: center;
     }
 
+    .hidden-content img{
+        width: 100%;
+        height: auto;
+    } 
+    
     .header-text h1 {
         margin-top: 20px;
         font-size: 30px;
@@ -250,11 +255,6 @@ nav .fas {
         display: grid;
         gap: 30px;
     }
-
-    .hidden-content img{
-        width: 100%;
-        height: auto;
-    } 
 
     .card {
         padding: 20px;
